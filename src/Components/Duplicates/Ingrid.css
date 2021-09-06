@@ -1,0 +1,136 @@
+#NavBar {
+  background-color: white;
+}
+
+#profile-Box .list-groupMod {
+  border-radius: 10px !important;
+  box-shadow: 0px 7px 13px 1px rgba(0, 0, 0, 0.33) !important;
+  width: fit-content !important;
+}
+
+#profile-Box .image-colMod {
+  /* display: flex;
+  flex-basis: content; */
+  align-items: flex-end !important;
+}
+
+#profile-Box .btn-linkMod {
+  display: flex !important;
+  flex-direction: column !important;
+  color: #495057 !important;
+  padding: 0px !important;
+}
+
+#profile-Box .btn-linkMod:hover {
+  color: #495057 !important;
+}
+
+#profile-Box #btn-blockMod {
+  border-radius: 20px !important;
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+  border: 1px solid;
+  height: 30px;
+}
+
+#profile-Box #btn-blockMod:hover {
+  background-color: #3790e945 !important;
+  border-color: #004182 !important;
+  border: 3px solid !important;
+  box-shadow: none !important;
+  color: #007bff !important;
+}
+
+#profile-Box {
+  width: 300px;
+  top: 64px;
+  position: absolute;
+  right: 272px;
+  box-shadow: 0px 7px 13px 1px rgba(0, 0, 0, 0.33);
+  z-index: 10;
+}
+
+.transformMod {
+  z-index: 10;
+}
+
+.nav-link-span {
+  color: #666666;
+}
+
+.nav-link-span:hover {
+  color: #1a1a1a;
+}
+
+.nav-icons {
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  stroke: transparent;
+  fill: #666666;
+}
+#global-nav-icon--mercado__home {
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  stroke: transparent;
+  fill: #666666;
+}
+#global-nav-icon--mercado__my-network {
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  stroke: transparent;
+  fill: #666666;
+}
+#global-nav-icon--mercado__notifications {
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  stroke: transparent;
+  fill: #666666;
+}
+#global-nav-icon--mercado__messaging {
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  stroke: transparent;
+  fill: #666666;
+}
+
+.nav-icons :hover {
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  stroke: transparent;
+  fill: #1a1a1a;
+  color: #1a1a1a;
+}
+#global-nav-icon--mercado__home :hover {
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  stroke: transparent;
+  fill: #1a1a1a;
+  color: #1a1a1a;
+}
+#global-nav-icon--mercado__my-network :hover {
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  stroke: transparent;
+  fill: #1a1a1a;
+  color: #1a1a1a;
+}
+#global-nav-icon--mercado__notifications :hover {
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  stroke: transparent;
+  fill: #1a1a1a;
+  color: #1a1a1a;
+}
+#global-nav-icon--mercado__messaging :hover {
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  stroke: transparent;
+  fill: #1a1a1a;
+  color: #1a1a1a;
+}
+
+@media only screen and (max-width: 850px) {
+  .nav-link-span {
+    display: none;
+  }
+}

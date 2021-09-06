@@ -1,0 +1,89 @@
+/* SideHome component on the Home page - third right column */
+
+.aside-sidehome {
+  color: #61605f;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.list-group {
+  border-radius: 8px;
+}
+
+.button-sidehome {
+  border: none;
+  background: transparent;
+  width: 1.8rem;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+
+.button-sidehome:hover {
+  background-color: #d4d3d1;
+  border-radius: 8rem;
+}
+
+#svg-sidehome1 {
+  margin-left: 0px!important; 
+  padding-bottom: 2px;
+}
+
+#svg-sidehome2 {
+  margin-left: 0px!important; 
+  padding-bottom: 2px;
+}
+
+.hoverable-link {
+  padding-bottom: 0px;
+}
+
+.hoverable-link:hover {
+  background-color: #eeeded;
+  text-decoration: none;
+  color: #61605f !important;
+  border-radius: 5px;
+}
+
+.external-icon svg {
+    opacity: 0;
+}
+
+.hoverable-link1:hover .external-icon svg {
+    opacity: 1;
+}
+
+.promoted-sidehome:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar on clicking Work in Navbar - component Sidebar.jsx*/
+
+#modal-sidebar {
+  position: absolute!important;
+  right: 0;
+  margin: auto;
+  -webkit-transform: translate3d(0%, 0, 0);
+  -ms-transform: translate3d(0%, 0, 0);
+   -o-transform: translate3d(0%, 0, 0);
+      transform: translate3d(0%, 0, 0);
+}
+
+.modalfade-sidebar .modal-sidebar {
+  right: -320px;
+  -webkit-transition: opacity 3s linear, right 3s ease-out;
+     -moz-transition: opacity 3s linear, right 3s ease-out;
+       -o-transition: opacity 3s linear, right 3s ease-out;
+          transition: opacity 3s linear, right 3s ease-out;
+}
+
+.modalfade-sidebar.in .modal-sidebar {
+  right: 0;
+}
+
+.modalcontent-sidebar {
+  overflow-y: auto;
+  height: 100vh;
+}
+

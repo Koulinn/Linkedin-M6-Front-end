@@ -1,0 +1,90 @@
+/* #5d3b09 */
+
+#NavBar {
+  background-color: white;
+}
+
+#profile-Box .list-groupMod {
+  border-radius: 10px !important;
+  box-shadow: 0px 7px 13px 1px rgba(0, 0, 0, 0.33) !important;
+  width: fit-content !important;
+}
+
+#profile-Box .image-colMod {
+  /* display: flex;
+  flex-basis: content; */
+  align-items: flex-end !important;
+}
+
+#profile-Box .btn-linkMod {
+  display: flex !important;
+  flex-direction: column !important;
+  color: #495057 !important;
+  padding: 0px !important;
+}
+
+#profile-Box .btn-linkMod:hover {
+  color: #495057 !important;
+}
+
+#profile-Box #btn-blockMod {
+  border-radius: 20px !important;
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+  border: 1px solid;
+  height: 30px;
+}
+
+#profile-Box #btn-blockMod:hover {
+  background-color: #3790e945 !important;
+  border-color: #004182 !important;
+  border: 3px solid !important;
+  box-shadow: none !important;
+  color: #007bff !important;
+}
+
+#profile-Box {
+  width: 300px;
+  top: 64px;
+  position: absolute;
+  right: -1px;
+  box-shadow: 0px 7px 13px 1px rgba(0, 0, 0, 0.33);
+  z-index: 10;
+}
+
+.transformMod {
+  z-index: 10;
+}
+
+.nav-icons * {
+  color: #666666;
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  stroke: transparent;
+  fill: #666666;
+}
+
+.nav-icons a:hover * {
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  stroke: transparent;
+  fill: #1a1a1a;
+  color: rgb(26, 26, 26);
+}
+
+.premium-inlink:hover {
+  color: #5d3b09 !important;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 850px) {
+  .txt-span {
+    display: none;
+  }
+}
+
+#profile-Box .inner-avatar{
+  height: 48px;
+  object-fit: cover;
+  width: 48px;
+}

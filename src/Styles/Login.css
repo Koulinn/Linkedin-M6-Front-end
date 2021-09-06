@@ -1,0 +1,80 @@
+#login-logo {
+  max-height: 128px;
+  width: 50%;
+}
+
+#login-logo > svg {
+  color: #000000;
+}
+
+.mod-logo-maxWidth {
+  max-width: 450px;
+}
+
+#logo-main-container,
+#logo-main-container h5,
+html {
+  color: black !important;
+  background-color: #f8f8f8;
+}
+
+#login-btn {
+  border-radius: 500px;
+  width: 40%;
+  color: white!important;
+}
+
+.logo-btn-FB {
+  border-radius: 500px;
+  background-color: #1877f2;
+  padding: 14px 18px;
+}
+
+
+.logo-btn-apple {
+  border-radius: 500px;
+  background-color: #080808;
+  padding: 14px 18px;
+}
+.apple-text {
+  color: white;
+}
+
+
+.btn-text {
+  margin-left: 8px;
+}
+
+#FB-login > svg {
+  transform: translateY(-2px);
+  margin-right: 8px;
+  fill: white;
+}
+
+#apple-login > svg {
+  transform: translateY(-4px);
+  margin-right: 8px;
+  fill: white;
+}
+
+.section-line {
+  width: 50%;
+  height: 1px;
+  background-color: rgb(204, 204, 204);
+}
+
+#btn-sign-up-strivefy {
+  border-radius: 500px;
+  padding: 14px 18px;
+}
+
+
+.loginp {
+  color: grey;
+  font-size: 12px;
+}
+
+
+.orModtranslate{
+  transform: translateY(-3px);
+}

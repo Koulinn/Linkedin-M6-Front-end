@@ -1,0 +1,139 @@
+.searchInput{
+    font-size: 14px;
+    height: 36px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    line-height: 1.75;
+    font-weight: 400;
+    font-size: 14px;
+    height: 34px;
+    border-color: rgba(0,0,0,0.08);
+    background-color: #eef3f8;
+    border-radius: .4rem;
+    color: rgba(0,0,0,0.9);
+    padding: 0 8px 0 40px;
+    max-width: 220px;
+    transition: all .3s linear;
+}
+
+
+.searchInput:focus{
+    max-width: 70%;
+    border-color: rgba(0,0,0,0.08) ;
+    background-color: #eef3f8 ;
+    box-shadow: none;
+    padding-left: 8px !important;
+
+}
+
+
+.searchIcon{
+    background-color: #eef3f8;
+    border-radius: .4rem 0 0 .4rem !important;
+}
+
+.search-Wrapper {
+    max-width: 425px;
+}
+
+.border-left-Work::before{
+    content: "";
+    position: absolute;
+    height: 52px;
+    left: 0px;
+    border-left: 1px solid rgba(0,0,0,0.08);
+}
+
+#NavBar #basic-navbar-nav svg{
+    transform: scale(1);
+    transition: transform .2s ease-in-out;
+    width: 24px;
+    
+}
+
+.Linkedin-Logo{
+    color: #0a66c2;
+}
+
+.small-inlink{
+    font-weight: 400;
+    /* color: rgba(0,0,0,0.6); */
+    font-size: 0.75rem;
+}
+
+#NavBar{
+    border-bottom: 1px solid rgba(177 177 177 / 60%);
+}
+
+#NavBar .small-inlink {
+    min-height: 52px;
+    min-width: 80px;
+}
+
+#NavBar .avatar{
+    border-radius: 50%;
+    border: none;
+    height: 24px;
+    transform: scale(1);
+    transition: transform .2s ease-in-out;
+    width: 24px;
+}
+
+.premium-inlink{
+    color: #915907 !important;
+    max-width: 100px;
+    text-align: center;
+
+}
+
+
+.triangle-Icon{
+    width: 0;
+height: 0;
+border-style: solid;
+border-width: 8px 6px 0 6px;
+border-color: rgba(0,0,0,0.6) transparent transparent transparent;
+transform: translateY(1px);
+}
+
+.transformMod{
+    transform: translateY(5px);
+}
+
+@media (min-width: 768px) { 
+    #NavBar{
+        height: 52px;
+    }
+
+}
+
+.red-circle-icon-OuterWrapper{
+    position: absolute;
+    top: 14px;
+    right: 24px;
+}
+
+.red-circle-Icon {
+    width: 16px;
+    height: 16px;
+    background: #cc1016;
+    border-radius: 50%;
+}
+
+.inner-white-circle{
+    height: 6px;
+    width: 6px;
+    border-radius: .6rem;
+    background-color: white;
+}
+
+.red-circle-Icon > span {
+    color: white;
+    transform: translateY(-1px);
+}
+
+.Overlay{
+    width: 100%;
+    height: 100%;
+    background-color: #616160;
+}
