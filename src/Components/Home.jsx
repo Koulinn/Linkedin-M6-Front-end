@@ -31,12 +31,9 @@ const Home = (props) => {
         //   },
         // }
       );
-      console.log("inside get all POSTS AFTER FETCHllllllllllllllllllll", response);
       let dataRequested = await response.json();
       const data = dataRequested;
-      console.log(data);
-      setPosts(data.slice(data.length -25));
-      console.log(dataRequested);
+      setPosts(data);
     } catch (e) {
       console.log(e);
       return e;

@@ -14,7 +14,6 @@ const CreatePost = (props) => {
   const handleSubmit = async () => {
     try {
       text.user = window.localStorage.getItem('_id')
-      console.log(text) 
       let response = await fetch(
         `${process.env.REACT_APP_DEV_URL}posts` ,
         // "https://striveschool-api.herokuapp.com/api/posts/",
@@ -28,11 +27,8 @@ const CreatePost = (props) => {
         }
         );
         
-        // console.log("GET DETAILS", response.json())
         let data = await response.json()
-        console.log('post Data<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<', data)
       let postId = data._id
-      console.log(postId)
       if (imgToSend){
         sendImage(postId)
       }else {
@@ -46,7 +42,6 @@ const CreatePost = (props) => {
   };
 
 const sendImage = async (id) => {
-  console.log("o que tem aqui", imgToSend)
   try {
     let response = await fetch(`${process.env.REACT_APP_DEV_URL}posts/${id}`,
       // "https://striveschool-api.herokuapp.com/api/posts/" + id,
@@ -67,7 +62,6 @@ const sendImage = async (id) => {
 }
 
   const imageHandler = (e) => {
-console.log("minha foto", e)
     let postImage = new FormData()
     postImage.append('image', e.target.files[0])
     setImgToSend(postImage)
