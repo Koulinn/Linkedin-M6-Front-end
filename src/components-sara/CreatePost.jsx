@@ -13,23 +13,24 @@ const CreatePost = (props) => {
 
   const handleSubmit = async () => {
     try {
-      let response = await fetch("https://striveschool-api.herokuapp.com/api/posts/",
+      text.user = window.localStorage.getItem('_id')
+      let response = await fetch(
+        `${process.env.REACT_APP_DEV_URL}posts` ,
+        // "https://striveschool-api.herokuapp.com/api/posts/",
         {
           method: "POST",
           headers: {
-            "Authorization": "Bearer " + window.localStorage.getItem('user_Token'),
+            // "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNWYwNmIzNTgxNzAwMTVjMjI3MDUiLCJpYXQiOjE2MzEwMzI0MTcsImV4cCI6MTYzMjI0MjAxN30.GuRCNEbL0_j5DW_1nAVACUZMQ9DKww6hz1cHkUQOD34",
             "Content-Type": "application/json",
           },
           body: JSON.stringify(text),
         }
-      );
-
-      // console.log("GET DETAILS", response.json())
-      let data = await response.json()
-      let id = data._id
-      console.log(id)
+        );
+        
+        let data = await response.json()
+      let postId = data._id
       if (imgToSend){
-        sendImage(id)
+        sendImage(postId)
       }else {
         props.handleClose()
         props.renderAgain()
@@ -41,14 +42,14 @@ const CreatePost = (props) => {
   };
 
 const sendImage = async (id) => {
-  console.log("o que tem aqui", imgToSend)
   try {
-    let response = await fetch("https://striveschool-api.herokuapp.com/api/posts/" + id,
+    let response = await fetch(`${process.env.REACT_APP_DEV_URL}posts/${id}`,
+      // "https://striveschool-api.herokuapp.com/api/posts/" + id,
       {
         method: "POST",
-        headers: {
-          "Authorization": "Bearer " + window.localStorage.getItem('user_Token'),
-        },
+        // headers: {
+        //   "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNWYwNmIzNTgxNzAwMTVjMjI3MDUiLCJpYXQiOjE2MzEwMzI0MTcsImV4cCI6MTYzMjI0MjAxN30.GuRCNEbL0_j5DW_1nAVACUZMQ9DKww6hz1cHkUQOD34",
+        // },
         body: imgToSend
       }
     );
@@ -61,9 +62,8 @@ const sendImage = async (id) => {
 }
 
   const imageHandler = (e) => {
-console.log("minha foto", e)
     let postImage = new FormData()
-    postImage.append('post', e.target.files[0])
+    postImage.append('image', e.target.files[0])
     setImgToSend(postImage)
     
     const reader = new FileReader();

@@ -21,7 +21,6 @@ function ModalAddNewExperience(props) {
 
   useEffect(() => {
     if (props.requestmethod === 'PUT'){
-
       setFormData(
         {
           role: props.userExperience.role,
@@ -33,10 +32,10 @@ function ModalAddNewExperience(props) {
           // format(new Date(props.userExperience.endDate), 'yyyy-MM-dd')
           ,
           description: props.userExperience.description,
-          area: props.userExperience.area
+          area: props.userExperience.area,
           
         }
-        )
+      )
         
         
         if(Object.keys(props.userExperience).includes('image') ){
@@ -56,10 +55,12 @@ function ModalAddNewExperience(props) {
   // POST Goes to the Token owner independently of the ID
   const postUserExperience = async () => {
     props.setIsLoading(true)
+    
     try {
+      if(props.requestmethod === 'PUT' && props.userExperience.image){
+        formData.image = props.userExperience.image
+      }
 
-      console.log(formData, 'put/post experience')
-      console.log(props.requestmethod, 'check request method add new experience')
       let response = await fetch(props.endpoint, {
         method: props.requestmethod,
         headers: {
@@ -71,7 +72,8 @@ function ModalAddNewExperience(props) {
       let newExperienceSent = await response.json()
       props.setIsLoading(false)
       props.setchangeuserdata(!props.changeUserData)
-      addExperienceImage(newExperienceSent._id)
+      console.log(newExperienceSent._id, 'new experience response')
+      await addExperienceImage(newExperienceSent._id)
       setFormData({
         role: '',
         company: '',
@@ -115,7 +117,7 @@ function ModalAddNewExperience(props) {
     try {
       let response = await fetch(
         // 'https://striveschool-api.herokuapp.com/api/profile/' + window.localStorage.getItem('_id') + '/experiences/' + expID + '/picture'
-        `${process.env.REACT_APP_DEV_URL}profile/experience/${window.localStorage.getItem('_id')}/update/${props.userExperience._id}/image`
+        `${process.env.REACT_APP_DEV_URL}profile/experience/${window.localStorage.getItem('_id')}/update/${expID}/image`
       , {
         method: 'PUT',
         // headers: {

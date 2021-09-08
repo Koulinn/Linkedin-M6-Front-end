@@ -20,21 +20,21 @@ function ModalAbout(props) {
 
   const updateProfileInfo = async () => {
     try {
-      console.log(formData, '<<<<<<<<')
+      console.log(formData, ' data sent modal about<<<<<<<<')
       let response = await fetch(
         // 'https://striveschool-api.herokuapp.com/api/profile/'
         `${process.env.REACT_APP_DEV_URL}profile/me/${window.localStorage.getItem('_id')}`
         , {
         method: 'PUT',
-        // headers: {
+        headers: {
         //   "Authorization": "Bearer " + window.localStorage.getItem('user_Token'),
-        //   "Content-Type": "application/json"
-        // },
+          "Content-Type": "application/json"
+        },
         body: JSON.stringify(formData)
 
       })
       let sent = await response.json()
-      console.log(sent)
+      console.log(sent, 'response retrieved sent modal about')
       props.setChangeUserdata(!props.changeUserData)
       props.onHide()
     } catch (e) {

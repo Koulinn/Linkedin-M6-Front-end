@@ -19,19 +19,21 @@ handleEdit()
   const handleEdit = async () => {
     console.log(props.id, "unique ID")
     try {
-      let response = await fetch("https://striveschool-api.herokuapp.com/api/posts/" + props.id,
+      let response = await fetch(
+        `${process.env.REACT_APP_DEV_URL}posts/${props.id}`,
+        // "https://striveschool-api.herokuapp.com/api/posts/" + props.id,
         {
           method: "GET",
-          headers: {
-            "Authorization": "Bearer " + window.localStorage.getItem('user_Token'),
-          },
+          // headers: {
+          //   "Authorization": "Bearer " + window.localStorage.getItem('user_Token'),
+          // },
         }
         );
         let data = await response.json()
         setTextEdit(data.text)
-        {data.image &&
-        setImgEdit(data.image)
-        }
+        // {data.image &&
+        // setImgEdit(data.image)
+        // }
     } catch (e) {
       console.log(e);
       return e;
@@ -40,11 +42,13 @@ handleEdit()
 
   const handleSubmit = async () => {
     try {
-      let response = await fetch("https://striveschool-api.herokuapp.com/api/posts/" + props.id,
+
+      let response = await fetch( `${process.env.REACT_APP_DEV_URL}posts/${props.id}`,
+        // "https://striveschool-api.herokuapp.com/api/posts/" + props.id,
         {
           method: "PUT",
           headers: {
-            "Authorization": "Bearer " + window.localStorage.getItem('user_Token'),
+            // "Authorization": "Bearer " + window.localStorage.getItem('user_Token'),
             "Content-Type": "application/json",
           },
           body: JSON.stringify(text),
@@ -64,12 +68,13 @@ handleEdit()
 
   const sendImage = async () => {
     try {
-      let response = await fetch("https://striveschool-api.herokuapp.com/api/posts/" + props.id,
+      let response = await fetch(`${process.env.REACT_APP_DEV_URL}posts/${props.id}`,
+        // "https://striveschool-api.herokuapp.com/api/posts/" + props.id,
         {
-          method: "PUT",
-          headers: {
-            "Authorization": "Bearer " + window.localStorage.getItem('user_Token'),
-          },
+          method: "POST",
+          // headers: {
+          //   "Authorization": "Bearer " + window.localStorage.getItem('user_Token'),
+          // },
           body: imgEdit
         }
       );
