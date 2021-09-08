@@ -20,13 +20,14 @@ const DeleteModal = (props) => {
     console.log(props.id, "unique ID");
     try {
       let response = await fetch(
-        "https://striveschool-api.herokuapp.com/api/posts/" + props.id,
+        `${process.env.REACT_APP_DEV_URL}posts/${props.id}`,
+        // "https://striveschool-api.herokuapp.com/api/posts/" + props.id,
         {
           method: "GET",
-          headers: {
-            Authorization:
-              "Bearer " + window.localStorage.getItem("user_Token"),
-          },
+          // headers: {
+          //   Authorization:
+          //     "Bearer " + window.localStorage.getItem("user_Token"),
+          // },
         }
       );
       let data = await response.json();
@@ -40,13 +41,14 @@ const DeleteModal = (props) => {
   const handleSubmit = async () => {
     try {
       let response = await fetch(
-        "https://striveschool-api.herokuapp.com/api/posts/" + props.id,
+        `${process.env.REACT_APP_DEV_URL}posts/${props.id}`,
+        // "https://striveschool-api.herokuapp.com/api/posts/" + props.id,
         {
           method: "DELETE",
-          headers: {
-            Authorization:
-              "Bearer " + window.localStorage.getItem("user_Token"),
-          },
+          // headers: {
+          //   Authorization:
+          //     "Bearer " + window.localStorage.getItem("user_Token"),
+          // },
         }
       );
     } catch (e) {
