@@ -13,11 +13,15 @@ const CreatePost = (props) => {
 
   const handleSubmit = async () => {
     try {
-      let response = await fetch("https://striveschool-api.herokuapp.com/api/posts/",
+      text.user = window.localStorage.getItem('_id')
+      console.log(text) 
+      let response = await fetch(
+        `${process.env.REACT_APP_DEV_URL}posts` ,
+        // "https://striveschool-api.herokuapp.com/api/posts/",
         {
           method: "POST",
           headers: {
-            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNWYwNmIzNTgxNzAwMTVjMjI3MDUiLCJpYXQiOjE2MzEwMzI0MTcsImV4cCI6MTYzMjI0MjAxN30.GuRCNEbL0_j5DW_1nAVACUZMQ9DKww6hz1cHkUQOD34",
+            // "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNWYwNmIzNTgxNzAwMTVjMjI3MDUiLCJpYXQiOjE2MzEwMzI0MTcsImV4cCI6MTYzMjI0MjAxN30.GuRCNEbL0_j5DW_1nAVACUZMQ9DKww6hz1cHkUQOD34",
             "Content-Type": "application/json",
           },
           body: JSON.stringify(text),
