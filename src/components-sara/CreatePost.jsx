@@ -17,15 +17,16 @@ const CreatePost = (props) => {
         {
           method: "POST",
           headers: {
-            "Authorization": "Bearer " + window.localStorage.getItem('user_Token'),
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNWYwNmIzNTgxNzAwMTVjMjI3MDUiLCJpYXQiOjE2MzEwMzI0MTcsImV4cCI6MTYzMjI0MjAxN30.GuRCNEbL0_j5DW_1nAVACUZMQ9DKww6hz1cHkUQOD34",
             "Content-Type": "application/json",
           },
           body: JSON.stringify(text),
         }
-      );
-
-      // console.log("GET DETAILS", response.json())
-      let data = await response.json()
+        );
+        
+        // console.log("GET DETAILS", response.json())
+        let data = await response.json()
+        console.log('post Data', data)
       let id = data._id
       console.log(id)
       if (imgToSend){
@@ -47,7 +48,7 @@ const sendImage = async (id) => {
       {
         method: "POST",
         headers: {
-          "Authorization": "Bearer " + window.localStorage.getItem('user_Token'),
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNWYwNmIzNTgxNzAwMTVjMjI3MDUiLCJpYXQiOjE2MzEwMzI0MTcsImV4cCI6MTYzMjI0MjAxN30.GuRCNEbL0_j5DW_1nAVACUZMQ9DKww6hz1cHkUQOD34",
         },
         body: imgToSend
       }

@@ -21,16 +21,17 @@ const Home = (props) => {
   const getAllPosts = async () => {
     try {
       let response = await fetch(
-        "https://striveschool-api.herokuapp.com/api/posts/",
-        {
-          method: "GET",
-          headers: {
-            Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGY1MmE4MDBlZmU3ODAwMTU1YzM0OTciLCJpYXQiOjE2MjY2Nzk5MzcsImV4cCI6MTYyNzg4OTUzN30.dz6oZpHTTO13hJGMeiBb_EOnLwxxM7uJOC8wlwLKXY4",
-          },
-        }
+        `${process.env.REACT_APP_DEV_URL}posts`
+        // "https://striveschool-api.herokuapp.com/api/posts/",
+        // {
+        //   method: "GET",
+        //   headers: {
+        //     Authorization:
+        //       "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNWYwNmIzNTgxNzAwMTVjMjI3MDUiLCJpYXQiOjE2MzEwMzI0MTcsImV4cCI6MTYzMjI0MjAxN30.GuRCNEbL0_j5DW_1nAVACUZMQ9DKww6hz1cHkUQOD34",
+        //   },
+        // }
       );
-      console.log("inside get all POSTS AFTER FETCH", response);
+      console.log("inside get all POSTS AFTER FETCHllllllllllllllllllll", response);
       let dataRequested = await response.json();
       const data = dataRequested;
       console.log(data);

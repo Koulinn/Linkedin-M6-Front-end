@@ -39,7 +39,7 @@ const App = (props) => {
             ></Login>}></Route>
             <Route path="/signup" exact render={(routerProps) => <SignUpForm setUserData={setUserData} setShowTopNavBar={setShowTopNavBar}   {...routerProps}></SignUpForm>}></Route>
   
-            {/* <Route path="/home" exact render={(routerProps) => <Home setShowTopNavBar={setShowTopNavBar} userData={userData}  {...routerProps}></Home>}></Route> */}
+            <Route path="/home" exact render={(routerProps) => <Home setShowTopNavBar={setShowTopNavBar} userData={userData}  {...routerProps}></Home>}></Route>
             <Route path="/profile" exact render={(routerProps) => <Profile setShowTopNavBar={setShowTopNavBar} userData={userData}  {...routerProps}></Profile>}></Route>
             <Route path="/userprofile" exact render={(routerProps) => <UserProfile userData={userData}{...routerProps} />} />
             <Route path="/transitionPage" exact render={(routerProps) => <TransitionPage setShowTopNavBar={setShowTopNavBar} userData={userData}{...routerProps} />}></Route>
