@@ -36,6 +36,7 @@ function ModalAddNewExperience(props) {
           
         }
       )
+      console.log('Inside user Effect', formData)
         
         
         if(Object.keys(props.userExperience).includes('image') ){
@@ -73,15 +74,20 @@ function ModalAddNewExperience(props) {
       props.setIsLoading(false)
       props.setchangeuserdata(!props.changeUserData)
       console.log(newExperienceSent._id, 'new experience response')
-      await addExperienceImage(newExperienceSent._id)
-      setFormData({
-        role: '',
-        company: '',
-        startDate: '',
-        endDate: '',
-        description: '',
-        area: ''
-      })
+      if(userImage){
+        await addExperienceImage(newExperienceSent._id)
+      }
+      if(props.requestmethod === 'POST'){
+
+        setFormData({
+          role: '',
+          company: '',
+          startDate: '',
+          endDate: '',
+          description: '',
+          area: ''
+        })
+      }
 
       setError(false)
 
@@ -151,7 +157,7 @@ function ModalAddNewExperience(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          <p className="exp-title">Add experience</p>
+          <p className="exp-title">{props.requestmethod === 'POST'? 'Add new experience' : 'Edit experience'}</p>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
