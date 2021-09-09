@@ -56,7 +56,7 @@ handleEdit()
           body: JSON.stringify(text),
         }
       );
-      if (imgEdit){
+      if (uploadNewImage){
         sendImage()
       }else {
         props.setShow(false)
