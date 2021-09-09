@@ -5,7 +5,7 @@ import TextPost from "./TextPost";
 import PostImg from "../assets/postfeed.jpg";
 import Likes from "./Likes";
 import Reactions from "./Reactions";
-import Comments from "./Comments";
+import CommentsArea from "./CommentsArea";
 import {useState} from 'react'
 
 const Feed = (props) => {
@@ -34,7 +34,7 @@ const Feed = (props) => {
         <Likes />
         <Reactions setShowCommentArea={setShowCommentArea} showCommentArea={showCommentArea} />
         {/* A list with the comments  */}
-        {showCommentArea ? <CommentsArea data={props.data}/>: <></>}
+        {showCommentArea ? <CommentsArea comments={props.data.comments}/>: <></>}
         
       </Col>
     </>

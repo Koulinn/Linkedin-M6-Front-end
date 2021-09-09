@@ -1,8 +1,9 @@
 import React from 'react'
 
-function Comment(props) {
+function Comment({comment}) {
     return (
         <div>
+            {console.log(comment, 'Comment component')}
             <div>
                 <img src="avatar" alt="" />
                 <p>Name</p>

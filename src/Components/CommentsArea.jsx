@@ -4,16 +4,17 @@ import Comment from "./Comment";
 import {useState} from 'react'
 
 
-const CommentArea = (props) => {
+const CommentArea = ({comments}) => {
   const [qtyCommentsToDisplay, setQtyCommentsToDisplay] = useState(3)
   //request here because it would need to re render the home to get a new comment
 
 
   return (
     <Container>
-      <CommentForm/>
-      {props.data.comments.length > 0 ? props.data.comments.map.slice(0,qtyCommentsToDisplay)(comment=> <Comment comment={comment}/>) : <p>Post without comments</p>}
-      {props.data.comments.length > 0 ? <Button onClick={()=>setQtyCommentsToDisplay(qtyCommentsToDisplay + 3)}/> : <></>}
+      {console.log(comments.length, 'comments from commentArea')}
+      {/* <CommentForm/> */}
+      {comments.length > 0 ? comments.map(comment=> <Comment comment={comment}/>) : <p>Post without comments</p>}
+      {/* {comments.length > 0 ? <Button onClick={()=>setQtyCommentsToDisplay(qtyCommentsToDisplay + 3)}/> : <></>} */}
     </Container>
   )
 }
