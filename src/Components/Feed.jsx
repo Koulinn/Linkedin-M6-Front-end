@@ -34,7 +34,8 @@ const Feed = (props) => {
         <Likes />
         <Reactions setShowCommentArea={setShowCommentArea} showCommentArea={showCommentArea} />
         {/* A list with the comments  */}
-        <Comments />
+        {showCommentArea ? <CommentsArea data={props.data}/>: <></>}
+        
       </Col>
     </>
   );
