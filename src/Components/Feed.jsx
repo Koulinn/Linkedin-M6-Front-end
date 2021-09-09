@@ -6,8 +6,11 @@ import PostImg from "../assets/postfeed.jpg";
 import Likes from "./Likes";
 import Reactions from "./Reactions";
 import Comments from "./Comments";
+import {useState} from 'react'
 
 const Feed = (props) => {
+  const [showCommentArea, setShowCommentArea] = useState(false)
+
   return (
     <>
       <Col className="feed-area">
@@ -29,7 +32,8 @@ const Feed = (props) => {
       </Col>
       <Col className="feed-area-end mb-3">
         <Likes />
-        <Reactions />
+        <Reactions setShowCommentArea={setShowCommentArea} showCommentArea={showCommentArea} />
+        {/* A list with the comments  */}
         <Comments />
       </Col>
     </>
