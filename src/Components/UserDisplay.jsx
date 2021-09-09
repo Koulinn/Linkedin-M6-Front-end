@@ -55,6 +55,18 @@ const UserDisplay = (props) => {
     }
   };
 
+  const downloadCsv = (e) => {
+    const profileId = window.localStorage.getItem("_id");
+
+    try {
+      window.location.replace(
+        process.env.REACT_APP_DEV_URL + `profile/experience/${profileId}/CSV`
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <Row>
       <Col className="col-12 profile-area mt-5 px-0">
@@ -144,8 +156,12 @@ const UserDisplay = (props) => {
               Open to
             </Button>
 
-            <Button className="btn-details-color ml-2" variant="primary">
-              Add section
+            <Button
+              className="btn-details-color ml-2"
+              variant="primary"
+              onClick={(e) => downloadCsv()}
+            >
+              Download CSV
             </Button>
 
             <Button
