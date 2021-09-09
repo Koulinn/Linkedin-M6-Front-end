@@ -7,6 +7,7 @@ const EditModalPost = (props) => {
   const [text, setText] = useState();
   const [textEdit, setTextEdit] = useState();
   const [imgEdit, setImgEdit] = useState();
+  const [uploadNewImage, setUploadNewImage] = useState()
 
   const handleChange = (key, value) => {
     setText({[key]: value});
@@ -31,9 +32,10 @@ handleEdit()
         );
         let data = await response.json()
         setTextEdit(data.text)
-        // {data.image &&
-        // setImgEdit(data.image)
-        // }
+        // URL from the image at the first reload
+        {data.image &&
+        setImgEdit(data.image)
+        }
     } catch (e) {
       console.log(e);
       return e;
@@ -54,7 +56,7 @@ handleEdit()
           body: JSON.stringify(text),
         }
       );
-      if (imgEdit){
+      if (uploadNewImage){
         sendImage()
       }else {
         props.setShow(false)
@@ -75,7 +77,7 @@ handleEdit()
           // headers: {
           //   "Authorization": "Bearer " + window.localStorage.getItem('user_Token'),
           // },
-          body: imgEdit
+          body: uploadNewImage
         }
       );
     } catch (e) {
@@ -85,6 +87,15 @@ handleEdit()
     props.setShow(false)
     props.renderAgain()
   }
+  const imageHandler = (e) => {
+    let postImage = new FormData()
+    postImage.append('image', e.target.files[0])
+    setUploadNewImage(postImage)
+    
+    // set preview
+    setImgEdit(URL.createObjectURL(e.target.files[0]))
+    // reader.setImgEdit(e.target.files[0]) ()
+  };
 
   return (
     <div className="create-post">
@@ -122,7 +133,7 @@ handleEdit()
             <img src={imgEdit} className="img-fluid" alt="" />
             }
           </div>
-          <div className="create-post-body-footer edit-disable d-flex pt-2">
+          <div className="create-post-body-footer d-flex pt-2">
             <div className="create-post-body-footer-icons d-flex justify-content-around">
               <span>
                 <svg
@@ -139,6 +150,7 @@ handleEdit()
                 </svg>
               </span>
               <span>
+              <input type="file" name="arquivo" id="arquivo" onChange={imageHandler}/>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
