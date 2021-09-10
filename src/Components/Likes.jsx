@@ -1,4 +1,4 @@
-const Likes = () => {
+const Likes = ({commentsQty}) => {
   return (
     <div className="like-section py-2">
       <span>
@@ -62,7 +62,7 @@ const Likes = () => {
       <span className="ml-2 about-feed links-feed">
         358 •
       </span>
-      <span className="about-feed links-feed"> 24 comments</span>
+      <span className="about-feed links-feed"> {commentsQty} comments</span>
     </div>
   )
 }
