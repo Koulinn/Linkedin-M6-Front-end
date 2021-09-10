@@ -1,4 +1,4 @@
-const ReactionsHover = ({postId}) => {
+const ReactionsHover = ({postId, renderAgain}) => {
 
   const toggleLike = async (e) => {
     try {
@@ -14,6 +14,7 @@ const ReactionsHover = ({postId}) => {
         );
         const serverResponse = await response.json()
         console.log(serverResponse)
+        renderAgain()
     } catch (e) {
         console.log(e);
         return e;

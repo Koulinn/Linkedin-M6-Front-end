@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Card, FormControl } from 'react-bootstrap'
 import { useState } from 'react'
 
-function CommentForm({ userId, postId }) {
+function CommentForm({ userId, postId, renderAgain }) {
     const [requestCommentBody, setRequestCommentBody] = useState({
         comment: null,
         user: userId
@@ -21,6 +21,7 @@ function CommentForm({ userId, postId }) {
             );
             const serverResponse = await response.json()
             console.log(serverResponse)
+            renderAgain()
         } catch (e) {
             console.log(e);
             return e;
