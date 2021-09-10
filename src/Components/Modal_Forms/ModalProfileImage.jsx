@@ -16,9 +16,9 @@ function ModalProfileImage(props) {
                 `${process.env.REACT_APP_DEV_URL}profile/me/${window.localStorage.getItem('_id')}`
                 , {
                 method: 'POST',
-                headers: {
-                    "Authorization": "Bearer " + window.localStorage.getItem('user_Token'),
-                },
+                // headers: {
+                //     "Authorization": "Bearer " + window.localStorage.getItem('user_Token'),
+                // },
                 body: userImage
 
             })
@@ -51,7 +51,7 @@ function ModalProfileImage(props) {
                         {userImagePath.length > 5 ? <div className="bg-photo-upload">
                             <img src={userImagePath} alt="" />
                         </div> : <div className="bg-photo-upload">
-                            <img src='https://keyrecruitment.co.za/wp-content/uploads/2013/10/image.jpg' alt="" />
+                            <img src={window.localStorage.getItem('image') ? window.localStorage.getItem('image') : 'https://keyrecruitment.co.za/wp-content/uploads/2013/10/image.jpg'} alt="" />
                         </div> }
                 </Form>
             </Modal.Body>
