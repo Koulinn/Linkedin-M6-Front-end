@@ -13,18 +13,12 @@ const Messaging = () => {
     const [Profiles, setProfiles] = useState([]);
     // console.log(Profiles);
     useEffect(() => {
-        fetch(
-            // 'https://striveschool-api.herokuapp.com/api/profile/', 
-            // `${process.env.REACT_APP_DEV_URL}profile/me/${window.localStorage.getItem('_id')}`, //miss endpoint getAll profile
+        fetch(`${process.env.REACT_APP_DEV_URL}profile`,
         {
             method: 'GET',
-            headers: {
-                authorization:
-                    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNWYwNmIzNTgxNzAwMTVjMjI3MDUiLCJpYXQiOjE2MjYyNzAyMjMsImV4cCI6MTYyNzQ3OTgyM30.0IcvG8-Zqf633mRWGCRlzG5yDVI6njZjZGZzJfuGulw",
-            },
         })
             .then((response) => response.json())
-            .then((data) => setProfiles(data.slice(85, 95)));
+            .then((data) => setProfiles(data.slice(0, 5)));
     }, []);
     return (
         <div
