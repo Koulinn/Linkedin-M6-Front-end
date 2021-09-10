@@ -7,12 +7,6 @@ function CommentForm({ userId, postId }) {
         comment: null,
         user: userId
     })
-
-
-
-
-    // requests post, edit, delete, 
-
     const postComment = async (e) => {
         try {
             e.preventDefault()
