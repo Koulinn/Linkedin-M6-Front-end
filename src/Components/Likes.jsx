@@ -1,4 +1,4 @@
-const Likes = ({commentsQty}) => {
+const Likes = ({commentsQty, likesQty}) => {
   return (
     <div className="like-section py-2">
       <span>
@@ -59,8 +59,9 @@ const Likes = ({commentsQty}) => {
           </g>
         </svg>
       </span>
+      
       <span className="ml-2 about-feed links-feed">
-        358 •
+        {likesQty} •
       </span>
       <span className="about-feed links-feed"> {commentsQty} comments</span>
     </div>

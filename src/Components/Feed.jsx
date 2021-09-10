@@ -31,10 +31,11 @@ const Feed = (props) => {
         )}
       </Col>
       <Col className="feed-area-end mb-3">
-        <Likes commentsQty={props.data.comments.length} />
-        <Reactions postId={props.data._id} setShowCommentArea={setShowCommentArea} showCommentArea={showCommentArea} />
+        
+        <Likes likesQty={props.data.likes.length} commentsQty={props.data.comments.length} />
+        <Reactions renderAgain={props.renderAgain} postId={props.data._id} setShowCommentArea={setShowCommentArea} showCommentArea={showCommentArea} />
         {/* {console.log(props.data, "Before comments")} */}
-        {showCommentArea ? <CommentsArea postId={props.data._id} comments={props.data.comments}/>: <></>}
+        {showCommentArea ? <CommentsArea renderAgain={props.renderAgain} postId={props.data._id} comments={props.data.comments}/>: <></>}
         
       </Col>
     </>
