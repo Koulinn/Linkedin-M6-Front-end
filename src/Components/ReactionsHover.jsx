@@ -1,7 +1,30 @@
-const ReactionsHover = () => {
+const ReactionsHover = ({postId}) => {
+
+  const toggleLike = async (e) => {
+    try {
+        e.preventDefault()
+        let response = await fetch(`${process.env.REACT_APP_DEV_URL}posts/${postId}/like`,
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({userId: window.localStorage.getItem('_id')}),
+            }
+        );
+        const serverResponse = await response.json()
+        console.log(serverResponse)
+    } catch (e) {
+        console.log(e);
+        return e;
+    }
+};
+
   return (
     <div className="different-reactions py-1">
-      <span>
+      <span onClick={(e)=>
+      toggleLike(e)
+      }>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="48"
