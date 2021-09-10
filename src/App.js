@@ -48,7 +48,7 @@ const App = (props) => {
   
          
   
-          {/* {showTopNavBar && <Messaging />} */}
+          {showTopNavBar && <Messaging />}
           <Footer></Footer>
         </div>
       </HashRouter>

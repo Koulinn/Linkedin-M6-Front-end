@@ -7,15 +7,15 @@ const PeopleAlsoViewed = () => {
   const [Profiles, setProfiles] = useState([]);
   //console.log(Profiles);
   useEffect(() => {
-    fetch("https://striveschool-api.herokuapp.com/api/profile/", {
+    fetch(`${process.env.REACT_APP_DEV_URL}profile`, {
       method: "GET",
-      headers: {
-        authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNWYwNmIzNTgxNzAwMTVjMjI3MDUiLCJpYXQiOjE2MjYyNzAyMjMsImV4cCI6MTYyNzQ3OTgyM30.0IcvG8-Zqf633mRWGCRlzG5yDVI6njZjZGZzJfuGulw",
-      },
+      // headers: {
+      //   authorization:
+      //     "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNWYwNmIzNTgxNzAwMTVjMjI3MDUiLCJpYXQiOjE2MjYyNzAyMjMsImV4cCI6MTYyNzQ3OTgyM30.0IcvG8-Zqf633mRWGCRlzG5yDVI6njZjZGZzJfuGulw",
+      // },
     })
       .then((response) => response.json())
-      .then((data) => setProfiles(data.slice(43, 54)));
+      .then((data) => setProfiles(data.slice(0, 5)));
   }, []);
   return (
     <>
@@ -36,7 +36,7 @@ const PeopleAlsoViewed = () => {
         >
           People also viewed
         </h2>
-        {Profiles.slice(3, 10).map((profile) => (
+        {Profiles.map((profile) => (
           <div className="profile_container pt-2" key={profile._id}>
             <img
               src={profile.image}
