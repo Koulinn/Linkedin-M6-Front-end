@@ -25,14 +25,14 @@ function ModalProfileInfo(props) {
         // 'https://striveschool-api.herokuapp.com/api/profile/'
         `${process.env.REACT_APP_DEV_URL}profile/me/${window.localStorage.getItem('_id')}`
         , {
-        method: 'PUT',
-        headers: {
-          "Authorization": "Bearer " + window.localStorage.getItem('user_Token'),
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
+          method: 'PUT',
+          headers: {
+            "Authorization": "Bearer " + window.localStorage.getItem('user_Token'),
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(formData)
 
-      })
+        })
       let sent = await response.json()
       console.log(sent)
       props.setChangeUserdata(!props.changeUserData)

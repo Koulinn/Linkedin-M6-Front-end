@@ -4,11 +4,11 @@ import { useState, useEffect } from 'react'
 
 function ModalAbout(props) {
   const [formData, setFormData] = useState({
-    surname: window.localStorage.getItem('surname'),
-    title: window.localStorage.getItem('title'),
-    name: window.localStorage.getItem('name'),
+    // surname: window.localStorage.getItem('surname'),
+    // title: window.localStorage.getItem('title'),
+    // name: window.localStorage.getItem('name'),
     bio: window.localStorage.getItem('bio'),
-    area: window.localStorage.getItem('area')
+    // area: window.localStorage.getItem('area')
   })
 
   const handleForm = (key, value) => {
