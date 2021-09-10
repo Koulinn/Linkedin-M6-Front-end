@@ -16,7 +16,7 @@ const Activity = () => {
           <Col xs={12} md={6}>
             <div className="d-flex activity-wrapper">
               <img
-                src="https://media-exp3.licdn.com/dms/image/C4D22AQFQRfHCjv9UIA/feedshare-shrink_160/0/1626593012519?e=1629936000&v=beta&t=f7t1rlBkkhkAx31oI_4-RfP6n2Hw2u3rXffUE3eWyc0"
+                src="https://jquery-plugins.net/image/plugin/bootstrap-4-the-most-popular-html-css-and-js-library.jpg"
                 alt=""
                 className="img-fluid"
               />
@@ -33,7 +33,7 @@ const Activity = () => {
           <Col xs={12} md={6}>
             <div className="d-flex activity-wrapper">
               <img
-                src="https://media-exp3.licdn.com/dms/image/C4D05AQFxemrAXwg5AA/videocover-low/0/1626520754515?e=1626868800&v=beta&t=OJEnTuLcVsaEbpwYDj3AAEFMQKkuvtYNUCD3nagY0sc"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png"
                 alt=""
                 className="img-fluid"
               />
@@ -47,7 +47,7 @@ const Activity = () => {
           <Col xs={12} md={6}>
             <div className="d-flex activity-wrapper">
               <img
-                src="https://media-exp3.licdn.com/dms/image/C4D22AQGYOFE5sf0Pig/feedshare-shrink_480/0/1626027006101?e=1629936000&v=beta&t=ZtqqcWselkbDmZ6piSb-U7gzRaIkPu64Nu3Md-svVdw"
+                src="https://lh3.googleusercontent.com/csXm00pBuJvmhsXcI1XauxFGrE66sHBbWI9QyKY0lt2h55a1VaKl6F5TrlH0wBC_aijloKw9lh8a=e14-rj-sc0xffffff-w1270"
                 alt=""
                 className="img-fluid"
               />
@@ -61,7 +61,7 @@ const Activity = () => {
           <Col xs={12} md={6}>
             <div className="d-flex activity-wrapper">
               <img
-                src="https://media-exp3.licdn.com/dms/image/C4D22AQFLH0l8Zm419w/feedshare-shrink_160/0/1625938085455?e=1629936000&v=beta&t=il31RfKAUYocp5ob3Yx4Ue-mX9xw0eEKY4kTJH8y1Nk"
+                src="https://d1izfjx1xfihx4.cloudfront.net/images/mongodb-leaf-logo.png"
                 alt=""
                 className="img-fluid"
               />

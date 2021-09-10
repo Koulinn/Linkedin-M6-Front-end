@@ -4,7 +4,7 @@ import Comment from "./Comment";
 import {useState} from 'react'
 
 
-const CommentArea = ({comments}) => {
+const CommentArea = ({comments, postId}) => {
   const [qtyCommentsToDisplay, setQtyCommentsToDisplay] = useState(3)
   //request here because it would need to re render the home to get a new comment
 
@@ -12,7 +12,7 @@ const CommentArea = ({comments}) => {
   return (
     <Container>
       {console.log(comments.length, 'comments from commentArea')}
-      {/* <CommentForm/> */}
+      <CommentForm postId={postId} userId={window.localStorage.getItem('_id')} />
       {comments.length > 0 ? comments.map(comment=> <Comment comment={comment}/>) : <p>Post without comments</p>}
       {/* {comments.length > 0 ? <Button onClick={()=>setQtyCommentsToDisplay(qtyCommentsToDisplay + 3)}/> : <></>} */}
     </Container>

@@ -1,16 +1,18 @@
 import React from 'react'
+import { format } from "date-fns";
 
 function Comment({comment}) {
+    //it needs to have the DELETE and PUT Methods here
     return (
         <div>
-            {console.log(comment, 'Comment component')}
+           {/* {A edit button, a delete button} */}
             <div>
-                <img src="avatar" alt="" />
-                <p>Name</p>
-                <span>Date published</span>
+                <img src={comment.image} alt="" />
+                <p>{comment.name}</p>
+                <span>{format(new Date(comment.createdAt), "dd-MM-yyyy")}</span>
             </div>
             <div>
-                <p>Comment Text</p>
+                <p>{comment.comment}</p>
             </div>
             
         </div>
