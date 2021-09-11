@@ -1,8 +1,8 @@
 import React from "react";
-import { Button, Form, Modal } from "react-bootstrap";
+import { Button, Modal } from "react-bootstrap";
 import { useState } from "react";
 import { useEffect } from "react";
-// import "../Styles/Sara.css";
+
 
 const DeleteModal = (props) => {
   const [text, setText] = useState();
@@ -19,15 +19,9 @@ const DeleteModal = (props) => {
   const handleEdit = async () => {
     console.log(props.id, "unique ID");
     try {
-      let response = await fetch(
-        `${process.env.REACT_APP_DEV_URL}posts/${props.id}`,
-        // "https://striveschool-api.herokuapp.com/api/posts/" + props.id,
+      let response = await fetch(`${process.env.REACT_APP_DEV_URL}posts/${props.id}`,
         {
           method: "GET",
-          // headers: {
-          //   Authorization:
-          //     "Bearer " + window.localStorage.getItem("user_Token"),
-          // },
         }
       );
       let data = await response.json();
@@ -42,13 +36,8 @@ const DeleteModal = (props) => {
     try {
       let response = await fetch(
         `${process.env.REACT_APP_DEV_URL}posts/${props.id}`,
-        // "https://striveschool-api.herokuapp.com/api/posts/" + props.id,
         {
           method: "DELETE",
-          // headers: {
-          //   Authorization:
-          //     "Bearer " + window.localStorage.getItem("user_Token"),
-          // },
         }
       );
     } catch (e) {

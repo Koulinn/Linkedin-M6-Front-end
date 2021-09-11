@@ -13,9 +13,7 @@ const EditModalPost = (props) => {
     setText({[key]: value});
   };
 
-  useEffect(() => {
-handleEdit()
-  }, [])
+  useEffect(() =>handleEdit(), [])
 
   const handleEdit = async () => {
     console.log(props.id, "unique ID")
