@@ -1,13 +1,12 @@
-import CustomCarousel from "./AuxComps/CustomCarousel";
+import CustomCarousel from "../AuxComps/CustomCarousel";
 import { Row, Col, Button } from "react-bootstrap";
-import imgBk from "../assets/bklinkedin.jpg";
-import avatar from "../assets/muriloavatar.png";
-import currentJob from "../assets/eli.jpg";
-import education from "../assets/dbs.jpg";
+import imgBk from "../../assets/bklinkedin.jpg";
+import currentJob from "../../assets/eli.jpg";
+import education from "../../assets/dbs.jpg";
 import { useState, useEffect } from "react";
 import React from "react";
-import ModalProfileInfo from "./Modal_Forms/ModalProfileInfo";
-import ModalProfileImage from "./Modal_Forms/ModalProfileImage";
+import ModalProfileInfo from "../Modal_Forms/ModalProfileInfo";
+import ModalProfileImage from "../Modal_Forms/ModalProfileImage";
 
 const UserDisplay = (props) => {
   const [modalShow, setModalShow] = React.useState(false);
