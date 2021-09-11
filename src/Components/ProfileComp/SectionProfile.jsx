@@ -1,6 +1,6 @@
 import React from "react";
 import { Col } from "react-bootstrap";
-import ModalAddNewExperience from "./Modal_Forms/ModalAddNewExperience";
+import ModalAddNewExperience from "../Modal_Forms/ModalAddNewExperience";
 
 const SectionProfile = (props) => {
   const [modalShow, setModalShow] = React.useState(false)
