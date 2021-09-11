@@ -1,6 +1,6 @@
 import React from "react"
 import { Navbar, Nav, Container } from "react-bootstrap"
-import SearchInput from "../SearchInput"
+import SearchInput from "./SearchInput"
 import { useState } from "react"
 import TriangleIcon from "./TriangleIcon"
 import RedCircleIcon from "./RedCircleIcon"
