@@ -1,8 +1,6 @@
 import { Col } from "react-bootstrap";
-import imgBk from "../assets/bklinkedin.jpg";
-import avatar from "../assets/muriloavatar.png";
-// import "../Styles/Murilo.css";
-import SideBellow from "./SideBelow";
+import imgBk from "../../assets/bklinkedin.jpg";
+import SideBellow from "../SideBelow";
 import { withRouter } from "react-router";
 
 const LeftProfile = (props) => {

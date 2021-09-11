@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import LeftProfile from "./LeftProfile";
+import LeftProfile from "./AuxComps/LeftProfile";
 import Post from "../components-sara/Post";
 import Sidebar from "./AuxComps/Sidebar";
 import Feed from "./Feed";
