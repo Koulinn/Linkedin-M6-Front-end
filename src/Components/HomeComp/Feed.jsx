@@ -1,9 +1,9 @@
 import { Col } from "react-bootstrap";
 import HeaderPost from "../postsComponents/HeaderPost";
 import PostUser from "../postsComponents/PostUser";
-import TextPost from "../TextPost";
-import Likes from "../Likes";
-import Reactions from "../Reactions";
+import TextPost from "../postsComponents/TextPost";
+import Likes from "../postsComponents/Likes";
+import Reactions from "../postsComponents/Reactions";
 import CommentsArea from "../postsComponents/Comment/CommentsArea";
 import {useState} from 'react'
 

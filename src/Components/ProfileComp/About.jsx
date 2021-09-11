@@ -1,9 +1,8 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-// import "../Styles/Sara.css";
 
 import { useState, useEffect } from "react";
-import ModalAbout from "../Components/Modal_Forms/ModalAbout";
+import ModalAbout from "../Modal_Forms/ModalAbout";
 
 const About = () => {
   const [readMore, setReadMore] = useState(false);
@@ -12,18 +11,9 @@ const About = () => {
   const [changeUserData, setChangeUserdata] = useState(false);
 
   const getUserData = async () => {
-    let userToken = "Bearer " + window.localStorage.getItem("user_Token");
     try {
-      let response = await fetch(
-        // "https://striveschool-api.herokuapp.com/api/profile/me",
-        `${process.env.REACT_APP_DEV_URL}profile/me/${window.localStorage.getItem('_id')}`,
-        {
-          method: "Get",
-          // headers: {
-          //   Authorization: userToken,
-          // },
-        }
-      );
+      let response = await fetch(`${process.env.REACT_APP_DEV_URL}profile/me/${window.localStorage.getItem('_id')}`,{
+          method: "Get",});
       let userData = await response.json();
       let userDataKeyList = Object.keys(userData);
       setuserData(userData);

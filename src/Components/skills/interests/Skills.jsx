@@ -1,7 +1,5 @@
 import React from "react";
-// import "../../../Styles/FooterChatAlsoViewed.css";
 import { Button } from "react-bootstrap";
-import { FiEdit2 } from "react-icons/fi";
 
 const Skills = () => {
   return (

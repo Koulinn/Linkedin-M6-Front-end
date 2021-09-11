@@ -1,6 +1,6 @@
 import React from 'react'
 import { Modal, Button, Form, Col } from 'react-bootstrap'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 function ModalProfileInfo(props) {
   const [error, setError] = useState(false)

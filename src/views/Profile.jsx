@@ -1,15 +1,15 @@
 import { Container, Row, Col } from "react-bootstrap";
 // import "../Styles/Murilo.css";
-import Dashboard from "../components-sara/Dashboard";
+import Dashboard from "../Components/ProfileComp/Dashboard";
 import RightProfileCard from "../Components/SideCards/RightProfileCard";
 import UserDisplay from "../Components/ProfileComp/UserDisplay";
-import About from "../components-sara/About";
-import Activity from "../components-sara/Activity";
-import Featured from "../components-sara/Featured";
+import About from "../Components/ProfileComp/About";
+import Activity from "../Components/ProfileComp/Activity";
+import Featured from "../Components/ProfileComp/Featured";
 import Experience from "../Components/ProfileComp/Experience/Experience";
 import Interests from "../Components/skills/interests/Interests";
 import Skills from "../Components/skills/interests/Skills";
-import CreatePost from "../components-sara/CreatePost";
+
 
 const Profile = (props) => {
   props.setShowTopNavBar(true)

@@ -1,14 +1,9 @@
 import React from "react";
-// import "../Styles/Sara.css";
 import { Link } from 'react-router-dom'
 const Dashboard = () => {
   return (
     <>
-      {/*  <Row>
-        <Col xs={12}>
-          <Post />
-        </Col>
-      </Row> */}
+   
       <div className="dashboard">
         <div className="dashboard-top-container">
           <h5>Your Dashboard</h5>
