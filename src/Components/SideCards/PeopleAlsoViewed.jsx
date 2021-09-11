@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import "../../Styles/FooterChatAlsoViewed.css";
-import "../../Styles/Sara.css";
+// import "../../Styles/Sara.css";
 import { Link } from 'react-router-dom'
 
 const PeopleAlsoViewed = () => {

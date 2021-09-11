@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import "../../Styles/Sara.css";
+// import "../../Styles/Sara.css";
 import { useState } from "react";
 
 const UPAbout = () => {

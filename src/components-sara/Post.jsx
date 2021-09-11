@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import "../Styles/Sara.css";
+// import "../Styles/Sara.css";
 import { useState } from "react";
 import CreatePost from "./CreatePost";
 

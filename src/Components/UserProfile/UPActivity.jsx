@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Styles/Sara.css";
+// import "../../Styles/Sara.css";
 import { Container, Row, Col } from "react-bootstrap";
 
 const UPActivity = () => {

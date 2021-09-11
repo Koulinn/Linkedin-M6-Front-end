@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import CarouselFeatured from "../Components/CarouselFeatured";
-import "../Styles/Sara.css";
+// import "../Styles/Sara.css";
 
 const Featured = () => {
   return (

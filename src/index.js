@@ -6,7 +6,7 @@ import './Styles/FooterChatAlsoViewed.css'
 // import './Styles/Ingrid.css'
 import './Styles/NavBar.css'
 import './Styles/General.css'
-import './Styles/Sara.css'
+import './Styles/activityAboutCreatePost.css'
 import './Styles/EducationLoaderProfModal.css'
 import './Styles/WorkModal.css'
 

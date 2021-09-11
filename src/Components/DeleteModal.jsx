@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { useState } from "react";
 import { useEffect } from "react";
-import "../Styles/Sara.css";
+// import "../Styles/Sara.css";
 
 const DeleteModal = (props) => {
   const [text, setText] = useState();
