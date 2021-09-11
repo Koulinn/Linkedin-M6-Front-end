@@ -1,8 +1,8 @@
 import React from "react"
-import "../../Styles/Login.css"
+import "../Styles/Login.css"
 import { useState } from "react"
 import { withRouter } from "react-router"
-import TransitionPage from "../RaiaComponents/TransitionPage"
+// import TransitionPage from "../Components/RaiaComponents/TransitionPage"
 
 function Login(props) {
   const [login, setLogin] = useState("")
@@ -63,7 +63,6 @@ function Login(props) {
     //   if (response.ok) {
         let userData = await userResponse
         if (userData.name === undefined) {
-          console.log('inside loginggg')
           setLoginValidation(true)
           return
         }

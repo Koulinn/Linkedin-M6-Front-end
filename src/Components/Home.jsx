@@ -1,12 +1,12 @@
 import { Container, Row, Col } from "react-bootstrap";
 import LeftProfile from "./LeftProfile";
 import Post from "../components-sara/Post";
-import Sidebar from "./RaiaComponents/Sidebar";
+import Sidebar from "./AuxComps/Sidebar";
 import Feed from "./Feed";
 import SideHome from "./SideHome";
 import { useState } from "react";
-import Spinner from "./RaiaComponents/Spinners";
-import TransitionPage from "./RaiaComponents/TransitionPage";
+import Spinner from "./AuxComps/Spinners";
+import TransitionPage from "./AuxComps/TransitionPage";
 import { useEffect } from "react";
 
 const Home = (props) => {

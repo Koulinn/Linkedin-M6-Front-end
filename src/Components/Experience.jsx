@@ -2,8 +2,8 @@ import { Row, Col } from "react-bootstrap";
 import SectionProfile from "./SectionProfile";
 import ExperienceDetails from "./ExperienceDetails";
 import { useState, useEffect } from "react";
-import EducationSection from "./RaiaComponents/EducationSection";
-import Spinners from "./RaiaComponents/Spinners"
+import EducationSection from "./AuxComps/EducationSection";
+import Spinners from "./AuxComps/Spinners"
 
 
 const Experience = (props) => {

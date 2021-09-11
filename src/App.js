@@ -5,11 +5,11 @@ import TopNavBar from './Components/NavBar/TopNavBar';
 import Profile from './Components/Profile'
 import Home from './Components/Home';
 import { Route, HashRouter } from 'react-router-dom';
-import Login from './Components/Login/Login'
+import Login from './views/Login'
 import Messaging from './Components/Messanger/Messaging'
 import UserProfile from './Components/UserProfile/UserProfile'
-import TransitionPage from './Components/RaiaComponents/TransitionPage';
-import SignUpForm from './Components/Login/SignUpForm';
+import TransitionPage from './Components/AuxComps/TransitionPage';
+import SignUpForm from './views/SignUpForm';
 import './Styles/MediaQuery.css'
 
 

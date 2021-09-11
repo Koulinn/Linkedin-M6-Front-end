@@ -5,7 +5,7 @@ import { useState } from "react"
 import TriangleIcon from "./TriangleIcon"
 import RedCircleIcon from "./RedCircleIcon"
 import ProfileBox from "./ProfileBox"
-import Sidebar from "../RaiaComponents/Sidebar.jsx"
+import Sidebar from "../AuxComps/Sidebar.jsx"
 import { withRouter } from "react-router"
 
 function TopNavBar(props) {
