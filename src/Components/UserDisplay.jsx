@@ -1,4 +1,4 @@
-import CustomCarousel from "./CustomCarousel";
+import CustomCarousel from "./AuxComps/CustomCarousel";
 import { Row, Col, Button } from "react-bootstrap";
 import imgBk from "../assets/bklinkedin.jpg";
 import avatar from "../assets/muriloavatar.png";
