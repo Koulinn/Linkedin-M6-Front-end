@@ -5,7 +5,7 @@ import {
   Dot,
   ThreeDots
 } from "react-bootstrap-icons";
-import "../Styles/Lea.css";
+// import "../Styles/Lea.css";
 
 const SideHome = () => {
   return (

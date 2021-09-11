@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../../Styles/Hasham.css'
+// import '../../Styles/FooterChatAlsoViewed.css'
 import { FaRegEdit, FaSearch } from 'react-icons/fa';
 import { BsThreeDots } from 'react-icons/bs';
 import { MdKeyboardArrowUp } from 'react-icons/md';

@@ -1,5 +1,5 @@
 import { Modal } from "react-bootstrap";
-import "../../Styles/Lea.css";
+// import "../../Styles/Lea.css";
 
 const Sidebar = (props) => { 
 
