@@ -5,7 +5,7 @@ import App from './App';
 import './Styles/FooterChatAlsoViewed.css'
 // import './Styles/Ingrid.css'
 import './Styles/NavBar.css'
-import './Styles/Murilo.css'
+import './Styles/General.css'
 import './Styles/Sara.css'
 import './Styles/Raia.css'
 import './Styles/WorkModal.css'

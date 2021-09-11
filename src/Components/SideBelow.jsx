@@ -1,5 +1,5 @@
 import { Col } from "react-bootstrap";
-import "../Styles/Murilo.css";
+// import "../Styles/Murilo.css";
 const SideBellow = () => {
   return (
     <div className="side-profile mt-2">

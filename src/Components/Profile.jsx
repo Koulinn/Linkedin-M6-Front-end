@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import "../Styles/Murilo.css";
+// import "../Styles/Murilo.css";
 import Dashboard from "../components-sara/Dashboard";
 import RightProfileCard from "./SideCards/RightProfileCard";
 import UserDisplay from "./UserDisplay";
