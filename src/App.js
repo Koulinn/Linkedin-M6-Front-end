@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Footer from './Components/Footer/Footer';
 import TopNavBar from './Components/NavBar/TopNavBar';
 import Profile from './Components/Profile'
-import Home from './Components/Home';
+import Home from './views/Home'
 import { Route, HashRouter } from 'react-router-dom';
 import Login from './views/Login'
 import Messaging from './Components/Messanger/Messaging'
