@@ -1,8 +1,8 @@
-import EditPost from "./EditPost"
+import EditPost from "./Modal_Forms/EditPost"
 import { useState } from "react"
 import { useEffect } from "react"
-import EditModalPost from "./EditModalPost"
-import DeleteModal from "./DeleteModal"
+import EditModalPost from "./Modal_Forms/EditModalPost"
+import DeleteModal from "./Modal_Forms/DeleteModal"
 
 const HeaderPost = (props) => {
   const [show, setShow] = useState(false);
