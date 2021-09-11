@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../Styles/Hasham.css";
+// import "../../../Styles/FooterChatAlsoViewed.css";
 const Interests = () => {
   return (
     <>

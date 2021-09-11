@@ -1,5 +1,5 @@
 import { Row, Col } from "react-bootstrap";
-import "../../Styles/Hasham.css";
+// import "../../Styles/FooterChatAlsoViewed.css";
 import { RiSettings2Fill, RiQuestionFill } from "react-icons/ri";
 import '../../Styles/MediaQuery.css'
 

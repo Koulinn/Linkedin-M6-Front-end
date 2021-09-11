@@ -1,11 +1,11 @@
 import React from "react"
 import { Navbar, Nav, Container } from "react-bootstrap"
-import SearchInput from "../SearchInput"
+import SearchInput from "./SearchInput"
 import { useState } from "react"
 import TriangleIcon from "./TriangleIcon"
 import RedCircleIcon from "./RedCircleIcon"
 import ProfileBox from "./ProfileBox"
-import Sidebar from "../RaiaComponents/Sidebar.jsx"
+import Sidebar from "../AuxComps/Sidebar.jsx"
 import { withRouter } from "react-router"
 
 function TopNavBar(props) {

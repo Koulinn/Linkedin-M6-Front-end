@@ -1,7 +1,7 @@
 import React from 'react';
 
 import EllipsisText from 'react-ellipsis-text';
-import '../../Styles/Hasham.css'
+// import '../../Styles/FooterChatAlsoViewed.css'
 const Chat = ({ person }) => {
     return (
         <>
