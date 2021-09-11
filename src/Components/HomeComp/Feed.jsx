@@ -1,11 +1,10 @@
 import { Col } from "react-bootstrap";
-import HeaderPost from "./HeaderPost";
-import PostUser from "./PostUser";
-import TextPost from "./TextPost";
-import PostImg from "../assets/postfeed.jpg";
-import Likes from "./Likes";
-import Reactions from "./Reactions";
-import CommentsArea from "./postsComponents/Comment/CommentsArea";
+import HeaderPost from "../postsComponents/HeaderPost";
+import PostUser from "../PostUser";
+import TextPost from "../TextPost";
+import Likes from "../Likes";
+import Reactions from "../Reactions";
+import CommentsArea from "../postsComponents/Comment/CommentsArea";
 import {useState} from 'react'
 
 const Feed = (props) => {

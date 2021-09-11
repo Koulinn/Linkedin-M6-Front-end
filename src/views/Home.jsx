@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import LeftProfile from "../Components/AuxComps/LeftProfile";
 import Post from "../components-sara/Post";
 import Sidebar from "../Components/AuxComps/Sidebar";
-import Feed from "../Components/Feed";
+import Feed from "../Components/HomeComp/Feed";
 import SideHome from "../Components/AuxComps/SideHome";
 import { useState } from "react";
 import Spinner from "../Components/AuxComps/Spinners";
