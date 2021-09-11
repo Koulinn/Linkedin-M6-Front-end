@@ -1,5 +1,5 @@
 import { Button, Col, Image, ListGroup, Row } from "react-bootstrap"
-import "../../Styles/Ingrid.css"
+// import "../../Styles/Ingrid.css"
 import { withRouter } from "react-router"
 
 const ProfileBox = (props) => (

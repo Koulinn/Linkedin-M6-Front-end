@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import './Styles/index.css';
 import App from './App';
 import './Styles/FooterChatAlsoViewed.css'
-import './Styles/Ingrid.css'
-import './Styles/Rafa.css'
+// import './Styles/Ingrid.css'
+import './Styles/NavBar.css'
 import './Styles/Murilo.css'
 import './Styles/Sara.css'
 import './Styles/Raia.css'
