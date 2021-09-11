@@ -5,7 +5,7 @@ import TextPost from "./TextPost";
 import PostImg from "../assets/postfeed.jpg";
 import Likes from "./Likes";
 import Reactions from "./Reactions";
-import CommentsArea from "./CommentsArea";
+import CommentsArea from "./postsComponents/CommentsArea";
 import {useState} from 'react'
 
 const Feed = (props) => {
