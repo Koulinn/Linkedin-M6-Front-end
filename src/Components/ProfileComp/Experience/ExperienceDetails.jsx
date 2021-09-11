@@ -1,8 +1,8 @@
 import { Col } from "react-bootstrap";
 import { format } from "date-fns";
 import React from "react";
-import currentJob from "../assets/eli.jpg";
-import ModalAddNewExperience from "./Modal_Forms/ModalAddNewExperience";
+import currentJob from "../../../assets/eli.jpg";
+import ModalAddNewExperience from "../../Modal_Forms/ModalAddNewExperience";
 
 const ExperienceDetails = (props) => {
   const [modalShow, setModalShow] = React.useState(false);

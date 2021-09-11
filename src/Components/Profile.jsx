@@ -6,7 +6,7 @@ import UserDisplay from "./UserDisplay";
 import About from "../components-sara/About";
 import Activity from "../components-sara/Activity";
 import Featured from "../components-sara/Featured";
-import Experience from "./Experience";
+import Experience from "./ProfileComp/Experience/Experience";
 import Interests from "./skills/interests/Interests";
 import Skills from "./skills/interests/Skills";
 import CreatePost from "../components-sara/CreatePost";

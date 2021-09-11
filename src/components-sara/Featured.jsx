@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
-import CarouselFeatured from "../Components/CarouselFeatured";
+import CarouselFeatured from "../Components/ProfileComp/FeaturedCarousel/CarouselFeatured";
 // import "../Styles/Sara.css";
 
 const Featured = () => {
