@@ -1,6 +1,6 @@
 import { Col } from "react-bootstrap";
 import HeaderPost from "../postsComponents/HeaderPost";
-import PostUser from "../PostUser";
+import PostUser from "../postsComponents/PostUser";
 import TextPost from "../TextPost";
 import Likes from "../Likes";
 import Reactions from "../Reactions";
