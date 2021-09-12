@@ -12,7 +12,7 @@ const TextPost = (props) => {
   const completeText = props.post.text;
 
   return (
-    <div>
+    <div className="px-3">
       <p className="text-post">
         {!displayText && shortText}
         {!displayText && completeText.length > 150 && (

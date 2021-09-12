@@ -429,6 +429,7 @@ p > img {
   height: 48px;
   width: 48px;
   border-radius: 50%;
+  object-fit: cover;
 }
 .circle-img-post {
   height: 48px;
@@ -676,4 +677,11 @@ p > img {
 
 .img-upload {
   overflow: hidden;
+}
+
+
+.bg-color{
+  background-color: #0a66c2;
+  
+
 }
