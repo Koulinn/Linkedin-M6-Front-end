@@ -10,10 +10,10 @@ const CommentArea = ({comments, postId, renderAgain}) => {
 
 
   return (
-    <Container>
+    <Container className="mt-3">
       {console.log(comments.length, 'comments from commentArea')}
       <CommentForm renderAgain={renderAgain} postId={postId} userId={window.localStorage.getItem('_id')} />
-      {comments.length > 0 ? comments.map(comment=> <Comment comment={comment}/>) : <p>Post without comments</p>}
+      {comments.length > 0 ? comments.map(comment=> <Comment comment={comment}/>) : <p className="mt-4 text-secondary">Be the first to comment!</p>}
       {/* {comments.length > 0 ? <Button onClick={()=>setQtyCommentsToDisplay(qtyCommentsToDisplay + 3)}/> : <></>} */}
     </Container>
   )

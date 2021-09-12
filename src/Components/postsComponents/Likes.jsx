@@ -1,6 +1,6 @@
 const Likes = ({commentsQty, likesQty}) => {
   return (
-    <div className="like-section py-2">
+    <div className="like-section px-3 py-2">
       <span>
         <svg
           width="16"

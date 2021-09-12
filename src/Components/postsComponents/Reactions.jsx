@@ -2,7 +2,7 @@ import ReactionsHover from "./ReactionsHover";
 
 const Reactions = ({setShowCommentArea, showCommentArea, postId, renderAgain}) => {
   return (
-    <div className="d-flex mt-3 mb-2 position-relative">
+    <div className="d-flex mt-3 mb-2 px-3 position-relative d-flex justify-content-between align-items-center">
       <div className="bg-reactions like-display">
         <span>
           <svg

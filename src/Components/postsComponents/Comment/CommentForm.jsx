@@ -28,15 +28,15 @@ function CommentForm({ userId, postId, renderAgain }) {
         }
     };
     return (
-        <Card>
-            <Card.Body>
+        <Card className="border-0">
+            <Card.Body className="p-0">
                 <FormControl as="textarea" aria-label="With textarea" onChange={(e) => {
                     setRequestCommentBody({
                         ...requestCommentBody,
                         comment: e.target.value
                     })
                 }} />
-                <Button variant="primary" onClick={(e)=> postComment(e)}>Send comment</Button>
+                <Button variant="primary" className="mt-3 bg-color" onClick={(e)=> postComment(e)}>Send comment</Button>
                 {/* {menu for delete and edit} */}
             </Card.Body>
         </Card>

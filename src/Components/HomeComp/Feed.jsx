@@ -12,8 +12,9 @@ const Feed = (props) => {
 
   return (
     <>
-      <Col className="feed-area">
+      <Col className="feed-area p-0">
         <HeaderPost
+          
           renderAgain={props.renderAgain}
           postId={props.data._id}
           id={props.data.user._id}
@@ -29,7 +30,7 @@ const Feed = (props) => {
           ></div>
         )}
       </Col>
-      <Col className="feed-area-end mb-3">
+      <Col className="feed-area-end px-0 mb-3">
         
         <Likes likesQty={props.data.likes.length} commentsQty={props.data.comments.length} />
         <Reactions renderAgain={props.renderAgain} postId={props.data._id} setShowCommentArea={setShowCommentArea} showCommentArea={showCommentArea} />
