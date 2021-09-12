@@ -1,14 +1,10 @@
 import React from 'react'
 import { Modal, Button, Form, Col } from 'react-bootstrap'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 function ModalAbout(props) {
   const [formData, setFormData] = useState({
-    // surname: window.localStorage.getItem('surname'),
-    // title: window.localStorage.getItem('title'),
-    // name: window.localStorage.getItem('name'),
     bio: window.localStorage.getItem('bio'),
-    // area: window.localStorage.getItem('area')
   })
 
   const handleForm = (key, value) => {
@@ -20,21 +16,16 @@ function ModalAbout(props) {
 
   const updateProfileInfo = async () => {
     try {
-      console.log(formData, ' data sent modal about<<<<<<<<')
-      let response = await fetch(
-        // 'https://striveschool-api.herokuapp.com/api/profile/'
-        `${process.env.REACT_APP_DEV_URL}profile/me/${window.localStorage.getItem('_id')}`
-        , {
+      let response = await fetch(`${process.env.REACT_APP_DEV_URL}profile/me/${window.localStorage.getItem('_id')}`, 
+      {
         method: 'PUT',
         headers: {
-        //   "Authorization": "Bearer " + window.localStorage.getItem('user_Token'),
           "Content-Type": "application/json"
         },
         body: JSON.stringify(formData)
 
       })
       let sent = await response.json()
-      console.log(sent, 'response retrieved sent modal about')
       props.setChangeUserdata(!props.changeUserData)
       props.onHide()
     } catch (e) {

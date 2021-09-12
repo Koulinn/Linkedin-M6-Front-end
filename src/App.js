@@ -2,14 +2,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react'
 import Footer from './Components/Footer/Footer';
 import TopNavBar from './Components/NavBar/TopNavBar';
-import Profile from './Components/Profile'
-import Home from './Components/Home';
+import Profile from './views/Profile'
+import Home from './views/Home'
 import { Route, HashRouter } from 'react-router-dom';
-import Login from './Components/Login/Login'
+import Login from './views/Login'
 import Messaging from './Components/Messanger/Messaging'
-import UserProfile from './Components/UserProfile/UserProfile'
-import TransitionPage from './Components/RaiaComponents/TransitionPage';
-import SignUpForm from './Components/Login/SignUpForm';
+import TransitionPage from './Components/AuxComps/TransitionPage';
+import SignUpForm from './views/SignUpForm';
 import './Styles/MediaQuery.css'
 
 
@@ -41,10 +40,8 @@ const App = (props) => {
   
             <Route path="/home" exact render={(routerProps) => <Home setShowTopNavBar={setShowTopNavBar} userData={userData}  {...routerProps}></Home>}></Route>
             <Route path="/profile" exact render={(routerProps) => <Profile setShowTopNavBar={setShowTopNavBar} userData={userData}  {...routerProps}></Profile>}></Route>
-            <Route path="/userprofile" exact render={(routerProps) => <UserProfile userData={userData}{...routerProps} />} />
             <Route path="/transitionPage" exact render={(routerProps) => <TransitionPage setShowTopNavBar={setShowTopNavBar} userData={userData}{...routerProps} />}></Route>
-            {/* <Route path="/home" component={Messaging}></Route>
-            <Route path="/profile" component={Messaging}></Route> */}
+       
   
          
   
