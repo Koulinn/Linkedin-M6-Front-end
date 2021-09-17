@@ -1,4 +1,5 @@
-import actions from "./actions"
+import requests from '../../lib/requests.js'
+const {getUserData} = requests
 
 export const template = (payload) => ({
     type: 'TEMPLATE',
@@ -12,13 +13,18 @@ export const TemplateThunk = (endpoint) => {
             const currentState = getState()
             //request
            
-                dispatch(actions.DoSomething('anyParameterAsPayload'))
+                dispatch({
+                    type: 'TEMPLATE',
+                    payload: payload
+                })
             
         } catch (error) {
-            dispatch(actions.DoSomething('anyParameterAsPayload'))
+            dispatch({
+                type: 'TEMPLATE',
+                payload: payload
+            })
             console.log(error)
         }
     }
-
 }
 
